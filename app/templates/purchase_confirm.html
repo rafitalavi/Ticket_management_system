@@ -1,0 +1,28 @@
+<!-- purchase_confirm.html -->
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="m-5 p-5 flex flex-column fs-6 fw-bolder align-items-center text-white bg-blue " style="width: 50%;height: 50%;margin-left: 25% !important;">
+        <h1 class="fw-bolder fs-6 text-center" style="font-size: 40px !important;">Confirm Purchase</h1>
+        <form method="post" action="{% url 'purchase_confirm' %}">
+            {% csrf_token %}
+            <input type="hidden" name="ticket_class" value="{{ ticket_class }}">
+            <input type="hidden" name="matchname" value="{{ matchname }}">
+            <input type="hidden" name="date" value="{{ date }}">
+            <input type="hidden" name="time" value="{{ time }}">
+            <input type="hidden" name="city" value="{{ city }}">
+            <input type="hidden" name="stad" value="{{ stad }}">
+            <input type="hidden" name="price" value="{{ price }}">
+            <div class="p-5 flex flex-column gap-5 justify-content-around">
+                <div>
+                    <label for="transaction_id">Transaction ID:</label>
+                    <input type="text" id="transaction_id" name="transaction_id" required class="text-dark">
+                </div>
+                <div>
+                    <button class="align-items-end btn btn-outline-success rounded-2" type="submit">Confirm Purchase</button>
+                </div>
+            </div>    
+        </form>
+</div>
+{% endblock body%}

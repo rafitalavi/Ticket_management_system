@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block title %}{% endblock title %}
+{% block body %}
+  <div class="row justify-content-around gap-2 ">
+    <h1 class="fw-bolder text-white fs-6 text-center" style="font-size: 55px !important;">Available Tickets</h1>
+    {% for ticket in available_tickets %}
+      <div class="col-4 bg-blue fw-bold text-light w-25 h-75 mx-5 mt-5 p-3">
+        <h1 class="fw-bolder fs-6 text-center" style="font-size:20px !important;">Ticket Class : {{ticket.Ticketclass}}</h1>
+        <div class="text-center mt-2">
+          <p class="text-light">MatchName : {{ticket.matchname}}</p>
+          <p class="text-light">Date : {{ticket.Date}}</p>
+          <p class="text-light">Time : {{ticket.Time}}</p>
+          <p class="text-light">City : {{ticket.city}}</p>
+          <p class="text-light">Stadium : {{ticket.stad}}</p>      
+          <p class="text-light">Price : {{ticket.price}}</p>
+        </div>
+           <form method="post" action="{% url 'purchase_ticket' %}">
+            {% csrf_token %}
+            <input type="hidden" name="ticket_class" value="{{ ticket.Ticketclass }}">
+            <input type="hidden" name="matchname" value="{{ ticket.matchname }}">
+            <input type="hidden" name="date" value="{{ ticket.Date }}">
+            <input type="hidden" name="time" value="{{ ticket.Time }}">
+            <input type="hidden" name="city" value="{{ ticket.city }}">
+            <input type="hidden" name="stad" value="{{ ticket.stad }}">
+            <input type="hidden" name="price" value="{{ ticket.price }}">
+            <button class="align-items-end btn btn-outline-success rounded-2" type="submit">Purchase</button>
+        </form>
+      </div>
+    {% endfor %}
+</div>
+{% endblock body %}

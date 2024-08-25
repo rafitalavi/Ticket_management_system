@@ -1,0 +1,143 @@
+{% extends 'layout.html' %}
+{% block title %}CHOROLIN TECKET COUNTER{% endblock title %}
+{% block body %}
+    <div class="container pt-3">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-5">
+                <div class="d-flex flex-column">
+                    <h5 class="text-primary fw-bold">CHOROLIN TECKET COUNTER</h5>
+                    <div class="d-flex align-items-center">
+                        <a href="index.html" class="btn btn-primary fw-bold mx-1">Sports</a>
+                        <a href="bus.html" class="btn btn-gray fw-bold mx-1">Bus</a>
+                        <a href="train.html" class="btn btn-primary fw-bold mx-1">train</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+            <div class="d-flex align-items-center">
+                <p class="text-primary m-0 fs-8">Help</p>
+                <input type="text" placeholder="English (us) $USD" class=" form-control bg-gray rounded-3 border-0 mx-2 fs-6 w-50 py-3">
+            <div class="btn btn-gray text-primary fw-bold rounded-3 py-1">Log in</div>
+
+                
+            </div> 
+            </div>
+        </div>
+    </div>
+    <div class ="sportImg d-none d-md-flex d-xl-flex flex-column">
+        <h1 class="text-white fw-bold" style=" font-size: 55px; padding: 7% 0 2% 16%;">Let the Journey begin</h1>
+        <div class="container-fluid" style="padding-bottom: 22%;">
+            <div class="row">
+                <div class="col-lg-2 col-md-4"></div>
+                <div class="col-lg-8 col-md-12 bg-blue p-4 rounded-1">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex align-items-center text-white fw-bold ">
+                            <div class="form-check">
+                                <input class="form-check-input p-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                <label class="form-check-label  fw-bold" for="flexRadioDefault1">
+                                One Way
+                                </label>
+                            </div>
+                            <div class="form-check mx-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                                <label class="form-check-label  fw-bold" for="flexRadioDefault2">
+                                Round Trip
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+                                <label class="form-check-label  fw-bold" for="flexRadioDefault3">
+                                RETURN
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <div>
+                                <label for="exampleDataList" class="form-label mb-0 text-white">City</label>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                <option value="Dhaka">
+                                <option value="Shylet">
+                                <option value="Chittagong">
+                                <option value="Rajhshahi">
+                                <option value="Mymensingh">
+                                <option value="Kumilla">
+                                <option value="Borishal">
+                                
+                                </datalist>
+                            </div>
+                            <div>
+                                <label for="exampleDataList" class="form-label mb-0 text-white">Destination</label>
+                                <input class="form-control" list="datalistOptions1" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions1">
+                                    <option value="Dhaka">
+                                        <option value="Shylet">
+                                        <option value="Chittagong">
+                                        <option value="Rajhshahi">
+                                        
+                                
+                                </datalist>
+                            </div> 
+                            <div>
+                                <lebel class="form-lebel mb-0 text-white fs-8 fw-bold">Journey Date</lebel>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div>
+                                <lebel class="form-lebel mb-0 text-white fs-8 fw-bold">RETURN Date</lebel>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div>
+                                <label for="exampleDataList" class="form-label mb-0 text-white">No.Person</label>
+                                <input class="form-control" list="datalistOptions2" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions2">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                
+                                </datalist>
+                            </div> 
+
+                            <div>
+                                <lebel class="form-lebel mb-0 text-white fs-8 fw-bold">Ticket class</lebel>
+                                <select class="form-select">
+                                    <option selected>Select Your Class</option>
+                                    <option value="1">AC PREMIUM</option>
+                                    <option value="2">AC Economy</option>
+                                    <option value="3">NON AC</option>
+                                </select>
+                                
+                            </div>
+                            
+                        </div> 
+                        <div class="d-flex align-items-center justify-content-between pt-2">
+                            <div class="d-flex flex-column text-light">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  checked>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    LOCAL COUNTER
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                    ANY COUNTER
+                                    </label>
+                                </div>
+                            </div> 
+                            <div class="btn btn-dark fs-5 fw-bold text-white">Search Your Ticket</div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock body %}
+    
